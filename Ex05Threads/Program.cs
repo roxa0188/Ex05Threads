@@ -27,8 +27,11 @@ namespace Ex05Threads
             Temperature tmp = new Temperature();
             Thread t3 = new Thread(tmp.Run);
             t3.Start();
-            t3.Join();
-            Console.WriteLine("\nEnter for Exit!");
+            while(t3.IsAlive)
+            {
+                Thread.Sleep(10000);
+            }
+            Console.WriteLine("\nAlarm-wire terminated");
             Console.ReadLine();
 
 
