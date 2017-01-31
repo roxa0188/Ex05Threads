@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Ex05Threads
 {
@@ -22,6 +22,7 @@ namespace Ex05Threads
             for(int i = 0; i<this.Count;i++)
             {
                 Console.WriteLine(this.Text);
+                Thread.Sleep(1000);
             }
         }
     }
