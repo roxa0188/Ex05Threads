@@ -24,15 +24,30 @@ namespace Ex05Threads
             //Console.WriteLine("\nEnter for Exit!");
             //Console.ReadLine();
 
-            Temperature tmp = new Temperature();
-            Thread t3 = new Thread(tmp.Run);
-            t3.Start();
-            while(t3.IsAlive)
-            {
-                Thread.Sleep(10000);
-            }
-            Console.WriteLine("\nAlarm-wire terminated");
+
+            //Temperature tmp = new Temperature();
+            //Thread t3 = new Thread(tmp.Run);
+            //t3.Start();
+            //while(t3.IsAlive)
+            //{
+            //    Thread.Sleep(10000);
+            //}
+            //Console.WriteLine("\nAlarm-wire terminated");
+            //Console.ReadLine();
+
+            Counter up = new Counter(2000, 2);
+            Counter down = new Counter(1000, -1);
+
+            Thread t4 = new Thread(up.Run);
+            Thread t5 = new Thread(down.Run);
+
+            t4.Start();
+            t5.Start();
+
             Console.ReadLine();
+            t4.Abort();
+            t5.Abort();
+
 
 
 
