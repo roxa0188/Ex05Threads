@@ -59,8 +59,8 @@ namespace Ex05Threads
         private void ex23()
         {
             //Ex2 + 3
-            TextWriter easy = new TextWriter("C# threads is easy!", 5);
-            TextWriter multiple = new TextWriter("Also, with multiple threads...", 5);
+            Ex23 easy = new Ex23("C# threads is easy!", 5);
+            Ex23 multiple = new Ex23("Also, with multiple threads...", 5);
             Thread t1 = new Thread(easy.Run);
             Thread t2 = new Thread(multiple.Run);
             t1.Start();
@@ -74,7 +74,7 @@ namespace Ex05Threads
         private void ex4()
         {
             //Ex4
-            Temperature tmp = new Temperature();
+            Ex4 tmp = new Ex4();
             Thread t3 = new Thread(tmp.Run);
             t3.Start();
             while (t3.IsAlive)
@@ -88,8 +88,8 @@ namespace Ex05Threads
         private void ex5()
         {
             //Ex5
-            Counter up = new Counter(2000, 2);
-            Counter down = new Counter(1000, -1);
+            Ex5 up = new Ex5(2000, 2);
+            Ex5 down = new Ex5(1000, -1);
 
             Thread t4 = new Thread(up.Run);
             Thread t5 = new Thread(down.Run);
@@ -105,8 +105,8 @@ namespace Ex05Threads
         private void ex67()
         {
             //Ex6+7
-            EX6 star = new EX6('*');
-            EX6 hash = new EX6('#');
+            Ex67 star = new Ex67('*');
+            Ex67 hash = new Ex67('#');
 
             Thread t6 = new Thread(star.Run);
             Thread t7 = new Thread(hash.Run);

@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Ex05Threads
 {
-    class Temperature
+    class Ex4
     {
         private int alarm = 0;
         Random rnd = new Random();

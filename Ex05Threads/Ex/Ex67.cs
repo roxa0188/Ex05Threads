@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Ex05Threads
 {
-    class EX6
+    class Ex67
     {
 
         public char Char { get; set; }
@@ -14,7 +14,7 @@ namespace Ex05Threads
         static int charCount = 0;
         static object locker = new object();
 
-        public EX6(char c)
+        public Ex67(char c)
         {
             this.Char = c;
             
