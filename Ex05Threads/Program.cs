@@ -13,6 +13,7 @@ namespace Ex05Threads
         {
             Console.WriteLine("Start");
 
+            //Ex2+3
             //TextWriter easy = new TextWriter("C# threads is easy!", 5);
             //TextWriter multiple = new TextWriter("Also, with multiple threads...", 5);
             //Thread t1 = new Thread(easy.Run);
@@ -25,6 +26,7 @@ namespace Ex05Threads
             //Console.ReadLine();
 
 
+            //Ex4
             //Temperature tmp = new Temperature();
             //Thread t3 = new Thread(tmp.Run);
             //t3.Start();
@@ -35,20 +37,34 @@ namespace Ex05Threads
             //Console.WriteLine("\nAlarm-wire terminated");
             //Console.ReadLine();
 
-            Counter up = new Counter(2000, 2);
-            Counter down = new Counter(1000, -1);
 
-            Thread t4 = new Thread(up.Run);
-            Thread t5 = new Thread(down.Run);
+            //Ex5
+            //Counter up = new Counter(2000, 2);
+            //Counter down = new Counter(1000, -1);
 
-            t4.Start();
-            t5.Start();
+            //Thread t4 = new Thread(up.Run);
+            //Thread t5 = new Thread(down.Run);
 
+            //t4.Start();
+            //t5.Start();
+
+            //Console.ReadLine();
+            //t4.Abort();
+            //t5.Abort();
+
+
+            //Ex6
+            EX6 star = new EX6('*');
+            EX6 hash = new EX6('#');
+
+            Thread t6 = new Thread(star.Run);
+            Thread t7 = new Thread(hash.Run);
+
+            t6.Start();
+            t7.Start();
             Console.ReadLine();
-            t4.Abort();
-            t5.Abort();
-
-
+            t6.Abort();
+            t7.Abort();
 
 
 
