@@ -6,12 +6,12 @@ using System.Threading;
 
 namespace Ex05Threads
 {
-    public class TextWriter
+    public class Ex23
     {
         public string Text { get; set; }
         public int Count { get; set; }
 
-        public TextWriter(string text, int count)
+        public Ex23(string text, int count)
         {
             this.Text = text;
             this.Count = count;

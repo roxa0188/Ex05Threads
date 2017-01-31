@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Ex05Threads
 {
-    class Counter
+    class Ex5
     {
         public int delay{ get; set; }
         public int count { get; set; }
@@ -14,7 +14,7 @@ namespace Ex05Threads
          static int counter = 0;
          static object locker = new object();
 
-        public Counter(int delay, int count)
+        public Ex5(int delay, int count)
         {
             this.delay = delay;
             this.count = count;
